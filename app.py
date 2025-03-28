@@ -19,7 +19,7 @@ def fetch_poster(movie_id):
     return f"https://image.tmdb.org/t/p/w185{poster_path}" if poster_path else "https://via.placeholder.com/185x278?text=No+Poster"
 
 # Load data
-movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
+movies_dict = pickle.load(open('movies_dict.pkl', 'rb'))
 movies = pd.DataFrame.from_dict(movies_dict, orient='index')
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
